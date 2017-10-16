@@ -1,0 +1,5 @@
+CD4071BE -  OR Gate, CD4071, 2 Input, 6.8 mA, 3 V to 18 V, DIP-14 
+	Farnell: 1106116 
+CD4081BE -  AND Gate, CD4081, 2 Input, 6.8 mA, 3 V to 18 V, DIP-14 
+	Farnell: 1106115
+

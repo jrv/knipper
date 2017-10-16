@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:knipper-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -32,8 +31,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:wiper
-LIBS:mount_hole
 LIBS:knipper-cache
 EELAYER 25 0
 EELAYER END
