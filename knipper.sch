@@ -1,0 +1,734 @@
+EESchema Schematic File Version 2
+LIBS:knipper-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:wiper
+LIBS:mount_hole
+LIBS:knipper-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NE555 U1
+U 1 1 59C95D85
+P 2450 3800
+F 0 "U1" H 2050 4150 50  0000 L CNN
+F 1 "NE555" H 2550 4150 50  0000 L CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 2450 3800 50  0001 C CNN
+F 3 "" H 2450 3800 50  0001 C CNN
+	1    2450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 59C95DAD
+P 3050 3400
+F 0 "R1" V 3130 3400 50  0000 C CNN
+F 1 "4k7" V 3050 3400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2980 3400 50  0001 C CNN
+F 3 "" H 3050 3400 50  0001 C CNN
+	1    3050 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 59C961E9
+P 3050 4650
+F 0 "#PWR01" H 3050 4400 50  0001 C CNN
+F 1 "GND" H 3050 4500 50  0000 C CNN
+F 2 "" H 3050 4650 50  0001 C CNN
+F 3 "" H 3050 4650 50  0001 C CNN
+	1    3050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 59C96350
+P 1850 4400
+F 0 "C2" H 1875 4500 50  0000 L CNN
+F 1 "10nF" H 1875 4300 50  0000 L CNN
+F 2 "Capacitors_THT:C_Axial_L5.1mm_D3.1mm_P7.50mm_Horizontal" H 1888 4250 50  0001 C CNN
+F 3 "" H 1850 4400 50  0001 C CNN
+	1    1850 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 59C96477
+P 3050 4400
+F 0 "C1" H 3075 4500 50  0000 L CNN
+F 1 "10uF" H 3075 4300 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 3088 4250 50  0001 C CNN
+F 3 "" H 3050 4400 50  0001 C CNN
+	1    3050 4400
+	-1   0    0    1   
+$EndComp
+Text Notes 1750 3000 0    60   ~ 0
+Astabiele Multivibrator
+$Comp
+L R_Variable R2
+U 1 1 59C97285
+P 3050 4000
+F 0 "R2" V 3150 3900 50  0000 L CNN
+F 1 "50K" V 3050 3950 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2980 4000 50  0001 C CNN
+F 3 "" H 3050 4000 50  0001 C CNN
+	1    3050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 59C978FD
+P 7500 3050
+F 0 "R7" V 7580 3050 50  0000 C CNN
+F 1 "1k" V 7500 3050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7430 3050 50  0001 C CNN
+F 3 "" H 7500 3050 50  0001 C CNN
+	1    7500 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R6
+U 1 1 59CAA097
+P 7500 2550
+F 0 "R6" V 7580 2550 50  0000 C CNN
+F 1 "1k" V 7500 2550 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7430 2550 50  0001 C CNN
+F 3 "" H 7500 2550 50  0001 C CNN
+	1    7500 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L IRF540N Q2
+U 1 1 59CAA0F4
+P 7950 2550
+F 0 "Q2" H 8200 2625 50  0000 L CNN
+F 1 "IRF520N" H 8200 2550 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 8200 2475 50  0001 L CIN
+F 3 "" H 7950 2550 50  0001 L CNN
+	1    7950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L IRF540N Q3
+U 1 1 59CAA156
+P 7950 3050
+F 0 "Q3" H 8200 3125 50  0000 L CNN
+F 1 "IRF520N" H 8200 3050 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 8200 2975 50  0001 L CIN
+F 3 "" H 7950 3050 50  0001 L CNN
+	1    7950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 59CB552C
+P 4400 3350
+F 0 "R5" V 4480 3350 50  0000 C CNN
+F 1 "10k" V 4400 3350 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4330 3350 50  0001 C CNN
+F 3 "" H 4400 3350 50  0001 C CNN
+	1    4400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 59CB5573
+P 4250 3350
+F 0 "R4" V 4330 3350 50  0000 C CNN
+F 1 "10k" V 4250 3350 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4180 3350 50  0001 C CNN
+F 3 "" H 4250 3350 50  0001 C CNN
+	1    4250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 59CB6C4D
+P 4100 3350
+F 0 "R3" V 4180 3350 50  0000 C CNN
+F 1 "10k" V 4100 3350 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4030 3350 50  0001 C CNN
+F 3 "" H 4100 3350 50  0001 C CNN
+	1    4100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4081 U3
+U 1 1 59CBF883
+P 6650 2550
+F 0 "U3" H 6650 2600 50  0000 C CNN
+F 1 "4081" H 6650 2500 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 6650 2550 60  0001 C CNN
+F 3 "" H 6650 2550 60  0001 C CNN
+	1    6650 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4071 U2
+U 1 1 59CBF8DC
+P 4900 2150
+F 0 "U2" H 4900 2200 50  0000 C CNN
+F 1 "4071" H 4900 2100 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 4900 2150 60  0001 C CNN
+F 3 "" H 4900 2150 60  0001 C CNN
+	1    4900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4071 U2
+U 2 1 59CBFA7E
+P 4900 2900
+F 0 "U2" H 4900 2950 50  0000 C CNN
+F 1 "4071" H 4900 2850 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 4900 2900 60  0001 C CNN
+F 3 "" H 4900 2900 60  0001 C CNN
+	2    4900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4081 U3
+U 2 1 59CBFCFA
+P 6650 3100
+F 0 "U3" H 6650 3150 50  0000 C CNN
+F 1 "4081" H 6650 3050 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 6650 3100 60  0001 C CNN
+F 3 "" H 6650 3100 60  0001 C CNN
+	2    6650 3100
+	1    0    0    -1  
+$EndComp
+Text Label 7700 3300 0    60   ~ 0
+DIR_R
+Text Label 8400 2750 0    60   ~ 0
+DIR_L
+Text Label 3650 2050 0    60   ~ 0
+LEFT
+Text Label 3650 2800 0    60   ~ 0
+RIGHT
+Text Label 3650 3000 0    60   ~ 0
+ALARM
+$Comp
+L IRF540N Q1
+U 1 1 59CDA9D0
+P 6750 4250
+F 0 "Q1" H 7000 4325 50  0000 L CNN
+F 1 "IRF520N" H 7000 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 7000 4175 50  0001 L CIN
+F 3 "" H 6750 4250 50  0001 L CNN
+	1    6750 4250
+	1    0    0    -1  
+$EndComp
+Text Label 4700 4250 0    60   ~ 0
+GND
+Text Label 4700 4050 0    60   ~ 0
+REV
+$Comp
+L SW_SP3T SW5
+U 1 1 59CE7148
+P 2100 2550
+F 0 "SW5" H 2100 2750 50  0000 C CNN
+F 1 "DIRECTION_SWITCH" H 2100 2350 50  0000 C CNN
+F 2 "knipper:AMP63824-3" H 1475 2725 50  0001 C CNN
+F 3 "" H 1475 2725 50  0001 C CNN
+	1    2100 2550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2300 2650
+Text Label 2750 2450 0    60   ~ 0
+LEFT
+Text Label 2750 2550 0    60   ~ 0
+RIGHT
+$Comp
+L R R9
+U 1 1 59D0BE42
+P 6300 4250
+F 0 "R9" V 6380 4250 50  0000 C CNN
+F 1 "1k" V 6300 4250 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6230 4250 50  0001 C CNN
+F 3 "" H 6300 4250 50  0001 C CNN
+	1    6300 4250
+	0    1    1    0   
+$EndComp
+Text Label 6850 3750 3    60   ~ 0
++12V
+$Comp
+L Screw_Terminal_01x02 J2
+U 1 1 59D0C9C4
+P 4500 4150
+F 0 "J2" H 4500 4250 50  0000 C CNN
+F 1 "5V_REV_FROM_CONTROLLER" H 4500 3950 50  0000 C CNN
+F 2 "Connectors_Phoenix:PhoenixContact_MC-G_02x5.08mm_Angled" H 4500 4150 50  0001 C CNN
+F 3 "" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R8
+U 1 1 59D0FEB8
+P 5050 4050
+F 0 "R8" V 5130 4050 50  0000 C CNN
+F 1 "330" V 5050 4050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4980 4050 50  0001 C CNN
+F 3 "" H 5050 4050 50  0001 C CNN
+	1    5050 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 59D152FF
+P 6650 4600
+F 0 "J3" H 6650 4700 50  0000 C CNN
+F 1 "REVLIGHTS" H 6650 4400 50  0000 C CNN
+F 2 "knipper:AMP63824-2" H 6650 4600 50  0001 C CNN
+F 3 "" H 6650 4600 50  0001 C CNN
+	1    6650 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J4
+U 1 1 59D17B16
+P 7500 3300
+F 0 "J4" H 7500 3400 50  0000 C CNN
+F 1 "DIR_RIGHT" H 7500 3100 50  0000 C CNN
+F 2 "knipper:AMP63824-2" H 7500 3300 50  0001 C CNN
+F 3 "" H 7500 3300 50  0001 C CNN
+	1    7500 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J5
+U 1 1 59D180B8
+P 9000 2750
+F 0 "J5" H 9000 2850 50  0000 C CNN
+F 1 "DIR_LEFT" H 9000 2550 50  0000 C CNN
+F 2 "knipper:AMP63824-2" H 9000 2750 50  0001 C CNN
+F 3 "" H 9000 2750 50  0001 C CNN
+	1    9000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x03-RESCUE-knipper J1
+U 1 1 59D18DE5
+P 3450 3100
+F 0 "J1" H 3450 3300 50  0000 C CNN
+F 1 "INPUT" H 3450 2900 50  0000 C CNN
+F 2 "knipper:AMP63824-3" H 3450 3100 50  0001 C CNN
+F 3 "" H 3450 3100 50  0001 C CNN
+	1    3450 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L MOUNT_HOLE H1
+U 1 1 59D17A9A
+P 9150 1150
+F 0 "H1" H 9150 900 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 9150 1400 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 9150 1150 60  0001 C CNN
+F 3 "" H 9150 1150 60  0001 C CNN
+	1    9150 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOUNT_HOLE H3
+U 1 1 59D17E17
+P 9800 1150
+F 0 "H3" H 9800 900 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 9800 1400 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 9800 1150 60  0001 C CNN
+F 3 "" H 9800 1150 60  0001 C CNN
+	1    9800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOUNT_HOLE H2
+U 1 1 59D17E91
+P 9150 1750
+F 0 "H2" H 9150 1500 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 9150 2000 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 9150 1750 60  0001 C CNN
+F 3 "" H 9150 1750 60  0001 C CNN
+	1    9150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOUNT_HOLE H4
+U 1 1 59D17F20
+P 9800 1750
+F 0 "H4" H 9800 1500 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 9800 2000 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 9800 1750 60  0001 C CNN
+F 3 "" H 9800 1750 60  0001 C CNN
+	1    9800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOUNT_HOLE H5
+U 1 1 59D197C3
+P 10500 1150
+F 0 "H5" H 10500 900 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 10500 1400 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 10500 1150 60  0001 C CNN
+F 3 "" H 10500 1150 60  0001 C CNN
+	1    10500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOUNT_HOLE H6
+U 1 1 59D198BE
+P 10500 1750
+F 0 "H6" H 10500 1500 60  0000 C CNN
+F 1 "MOUNT_HOLE" H 10500 2000 60  0000 C CNN
+F 2 "knipper:MountingHole_3mm" H 10500 1750 60  0001 C CNN
+F 3 "" H 10500 1750 60  0001 C CNN
+	1    10500 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3550 3050 3850
+Connection ~ 3050 3800
+Wire Wire Line
+	2950 4000 2950 4200
+Wire Wire Line
+	1950 3600 1800 3600
+Wire Wire Line
+	1800 3600 1800 4200
+Wire Wire Line
+	2450 4200 2450 4600
+Wire Wire Line
+	1850 4250 1850 3800
+Wire Wire Line
+	1850 3800 1950 3800
+Wire Wire Line
+	1800 4200 3050 4200
+Wire Wire Line
+	1950 4000 1900 4000
+Wire Wire Line
+	1900 4000 1900 3200
+Connection ~ 3050 3200
+Wire Wire Line
+	3050 4150 3050 4250
+Wire Wire Line
+	3050 4550 3050 4650
+Wire Wire Line
+	4700 4600 1850 4600
+Wire Wire Line
+	1850 4600 1850 4550
+Connection ~ 3050 4600
+Connection ~ 2450 4600
+Connection ~ 3050 4200
+Connection ~ 2950 4200
+Wire Wire Line
+	2450 3400 2450 3200
+Connection ~ 2450 3200
+Wire Notes Line
+	1600 2900 1600 4900
+Wire Notes Line
+	1600 4900 3500 4900
+Wire Notes Line
+	3500 2900 1600 2900
+Wire Wire Line
+	8250 2050 8250 2850
+Wire Wire Line
+	8250 2850 8050 2850
+Wire Wire Line
+	8050 2350 8250 2350
+Connection ~ 8250 2350
+Wire Wire Line
+	8050 2750 8800 2750
+Wire Wire Line
+	7650 2550 7750 2550
+Wire Wire Line
+	7750 3050 7650 3050
+Wire Wire Line
+	7350 3050 7250 3050
+Wire Wire Line
+	7250 2550 7350 2550
+Wire Wire Line
+	3650 2050 4300 2050
+Wire Wire Line
+	3650 2800 4300 2800
+Wire Wire Line
+	3650 3000 4300 3000
+Wire Wire Line
+	4300 2250 4200 2250
+Wire Wire Line
+	4200 2250 4200 3000
+Connection ~ 4200 3000
+Wire Wire Line
+	4100 3200 4100 2050
+Connection ~ 4100 2050
+Wire Wire Line
+	4250 3200 4250 3000
+Connection ~ 4250 3000
+Wire Wire Line
+	4400 3200 4150 3200
+Wire Wire Line
+	4150 3200 4150 2800
+Connection ~ 4150 2800
+Wire Wire Line
+	4100 3500 4100 3700
+Wire Wire Line
+	3900 3550 8600 3550
+Wire Wire Line
+	4400 3550 4400 3500
+Wire Wire Line
+	4250 3500 4250 3550
+Connection ~ 4250 3550
+Connection ~ 4100 3550
+Wire Wire Line
+	5500 2450 6050 2450
+Wire Wire Line
+	5500 2900 6050 2900
+Wire Wire Line
+	5800 2650 6050 2650
+Wire Wire Line
+	5800 3100 6050 3100
+Connection ~ 5800 3100
+Wire Wire Line
+	5800 2650 5800 3850
+Wire Wire Line
+	6850 4450 6850 4600
+Wire Wire Line
+	1850 2150 1850 2550
+Wire Wire Line
+	1850 2550 1900 2550
+Wire Wire Line
+	2300 2450 2750 2450
+Wire Wire Line
+	8050 3250 8050 3300
+Wire Wire Line
+	8050 3300 7700 3300
+Wire Wire Line
+	6850 3750 6850 4100
+Wire Wire Line
+	4700 4250 5300 4250
+Wire Wire Line
+	5900 4050 6850 4050
+Connection ~ 6850 4050
+Wire Wire Line
+	4700 4150 4700 4600
+Wire Wire Line
+	5200 4050 5300 4050
+Wire Wire Line
+	4700 4050 4900 4050
+Wire Wire Line
+	6850 4700 7300 4700
+Wire Wire Line
+	7700 3400 8050 3400
+Wire Wire Line
+	3050 3100 3050 3250
+Wire Wire Line
+	3650 3100 3900 3100
+Wire Wire Line
+	3900 3100 3900 3550
+Wire Wire Line
+	7250 3050 7250 3100
+Wire Wire Line
+	6050 3100 6050 3200
+Wire Wire Line
+	6050 2900 6050 3000
+Wire Wire Line
+	2950 3800 3050 3800
+Wire Wire Line
+	2950 3600 3300 3600
+Wire Wire Line
+	3300 3600 3300 3850
+Wire Wire Line
+	3300 3850 5800 3850
+Wire Wire Line
+	6450 3300 6450 3550
+Wire Wire Line
+	6450 4250 6550 4250
+Wire Wire Line
+	5900 4250 6150 4250
+Wire Wire Line
+	2300 2550 2750 2550
+Wire Wire Line
+	5500 2150 5500 2450
+Wire Wire Line
+	4700 3100 4700 3550
+Wire Wire Line
+	4700 2350 4700 2500
+Wire Wire Line
+	4700 2500 5250 2500
+Wire Wire Line
+	5250 2500 5250 3200
+Wire Wire Line
+	5250 3200 4700 3200
+Connection ~ 4700 3200
+Wire Wire Line
+	4700 2700 4700 2600
+Wire Wire Line
+	4700 2600 5300 2600
+Wire Wire Line
+	5300 2600 5300 1600
+Wire Wire Line
+	4700 1950 4700 1800
+Wire Wire Line
+	4700 1800 5300 1800
+Connection ~ 5300 1800
+Wire Wire Line
+	6450 2750 6450 2800
+Wire Wire Line
+	6450 2800 6300 2800
+Wire Wire Line
+	6300 2800 6300 3350
+Wire Wire Line
+	6300 3350 6450 3350
+Connection ~ 6450 3350
+Wire Wire Line
+	6450 2350 6450 2200
+Wire Wire Line
+	6450 2900 6450 2850
+Wire Wire Line
+	6450 2850 7000 2850
+Wire Wire Line
+	7000 2850 7000 2300
+Wire Wire Line
+	7000 2300 6450 2300
+Connection ~ 6450 2300
+$Comp
+L +12V #PWR02
+U 1 1 59D1F3AA
+P 5300 1600
+F 0 "#PWR02" H 5300 1450 50  0001 C CNN
+F 1 "+12V" H 5300 1740 50  0000 C CNN
+F 2 "" H 5300 1600 50  0001 C CNN
+F 3 "" H 5300 1600 50  0001 C CNN
+	1    5300 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR03
+U 1 1 59D2075E
+P 1850 2150
+F 0 "#PWR03" H 1850 2000 50  0001 C CNN
+F 1 "+12V" H 1850 2290 50  0000 C CNN
+F 2 "" H 1850 2150 50  0001 C CNN
+F 3 "" H 1850 2150 50  0001 C CNN
+	1    1850 2150
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3500 4900 3500 2900
+$Comp
+L +12V #PWR04
+U 1 1 59D20D94
+P 3050 3100
+F 0 "#PWR04" H 3050 2950 50  0001 C CNN
+F 1 "+12V" H 3050 3240 50  0000 C CNN
+F 2 "" H 3050 3100 50  0001 C CNN
+F 3 "" H 3050 3100 50  0001 C CNN
+	1    3050 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3200 3250 3200
+$Comp
+L +12V #PWR05
+U 1 1 59D21124
+P 8250 2050
+F 0 "#PWR05" H 8250 1900 50  0001 C CNN
+F 1 "+12V" H 8250 2190 50  0000 C CNN
+F 2 "" H 8250 2050 50  0001 C CNN
+F 3 "" H 8250 2050 50  0001 C CNN
+	1    8250 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR06
+U 1 1 59D212B9
+P 6450 2200
+F 0 "#PWR06" H 6450 2050 50  0001 C CNN
+F 1 "+12V" H 6450 2340 50  0000 C CNN
+F 2 "" H 6450 2200 50  0001 C CNN
+F 3 "" H 6450 2200 50  0001 C CNN
+	1    6450 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3200 3750 3200
+Wire Wire Line
+	3750 3200 3750 3400
+Wire Wire Line
+	3750 3400 3250 3400
+Wire Wire Line
+	3250 3400 3250 3200
+Text Label 4700 1800 0    60   ~ 0
++12V
+Text Label 7000 2300 2    60   ~ 0
++12V
+Connection ~ 4400 3550
+Connection ~ 4700 3550
+Wire Wire Line
+	8050 3400 8050 3550
+Connection ~ 6450 3550
+Wire Wire Line
+	8800 2850 8600 2850
+Wire Wire Line
+	8600 2850 8600 3550
+Connection ~ 8050 3550
+Wire Wire Line
+	7300 4700 7300 3550
+Connection ~ 7300 3550
+Wire Wire Line
+	4100 3700 3750 3700
+Wire Wire Line
+	3750 3700 3750 4600
+Text Label 2450 4600 0    60   ~ 0
+GND
+Connection ~ 4700 4250
+Connection ~ 3750 4600
+$Comp
+L LTV-814 U4
+U 1 1 59D0BA60
+P 5600 4150
+F 0 "U4" H 5400 4350 50  0000 L CNN
+F 1 "LTV-814" H 5600 4350 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W7.62mm" H 5400 3950 50  0001 L CIN
+F 3 "" H 5625 4150 50  0001 L CNN
+	1    5600 4150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
